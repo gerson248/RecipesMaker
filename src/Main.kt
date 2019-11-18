@@ -23,15 +23,15 @@ fun menuPrincipal(){
             println("Vuelva a ingresar un numero ")
         }
         when (opcion){
-            1->recetas.add(hacerReceta())
-            2->mostrarReceta(recetas)
+            1->recetas.add(makeRecipe())
+            2->viewRecipe(recetas)
             3->println("Esta saliendo del programa ...")
         }
 
     }while(opcion.compareTo(3)<0)
 }
 
-fun hacerReceta(): String{
+fun makeRecipe(): String{
     val listaIngredientes = listOf<String>("Agua","Leche","Carne","Verduras","Frutas","Cereal","Huevos","Aceite")
     var ingredientes: String=""
     var valor:Int=-1
@@ -53,10 +53,10 @@ fun hacerReceta(): String{
     return ingredientes
 }
 
-fun mostrarReceta(recetas: List<String>){
+fun viewRecipe(recetas: List<String>){
     println("Ingredientes de la receta :")
     recetas.forEach{
         println("$it")
     }
-    println("\n")
+    println("  ")
 }
