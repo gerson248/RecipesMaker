@@ -2,6 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="630a4007-471b-4a96-8c3c-b583781f50a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/model/AIngrediente.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Aceite.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Agua.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Carne.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Cereal.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Fruta.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Huevo.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/IIngrediente.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Leche.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/Verdura.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
     </list>
@@ -24,7 +34,7 @@
   <component name="ProjectId" id="1T5TnaGv7tZKEcUEBQT7lq5tViO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CopiaMakeRecipe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

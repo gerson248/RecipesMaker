@@ -1,4 +1,8 @@
+import model.*
 import java.lang.Exception
+
+var exit=1
+var recetas: MutableList<String> = ArrayList()
 
 fun main(args: Array<String>){
     println(":: Bienvenidos a recipe Maker")
@@ -6,7 +10,7 @@ fun main(args: Array<String>){
 }
 
 fun menuPrincipal(){
-    val recetas: MutableList<String> = ArrayList()
+
     var opcion =-1
     val menu: String = """
         Selecciona la Opcion deseada
@@ -23,23 +27,37 @@ fun menuPrincipal(){
             println("Vuelva a ingresar un numero ")
         }
         when (opcion){
-            1->recetas.add(makeRecipe())
-            2->viewRecipe(recetas)
+            1->makeRecipe()
+            2->viewRecipe()
             3->println("Esta saliendo del programa ...")
         }
 
     }while(opcion.compareTo(3)<0)
 }
 
-fun makeRecipe(): String{
-    val listaIngredientes = listOf<String>("Agua","Leche","Carne","Verduras","Frutas","Cereal","Huevos","Aceite")
-    var ingredientes: String=""
+fun makeRecipe(){
+    //val listaIngredientes = listOf<String>("Agua","Leche","Carne","Verduras","Frutas","Cereal","Huevos","Aceite")
+    //var ingredientes: String=""
+    //var agua = Agua()
     var valor:Int=-1
-    println("Escoger un ingrediente (Escribir el numero)")
-    for((index,cosa) in listaIngredientes.withIndex()){
-        println("${index + 1} -> $cosa")
-    }
-    try{
+    var listaGeneral = """
+        Selecione un grupo
+         1.- Agua
+         2.- Leche
+         3.- Carne
+         4.- Verduras
+         5.- Frutas
+         6.- Cereal
+         7.- Huevos
+         8.- Aceite
+         9.- Salir
+    """.trimIndent()
+
+    /*for((index,cosa) in listaIngredientes.withIndex()){
+        println("${index + 1} .- $cosa")
+        println("9 .- salir")
+    }*/
+    /*try{
         valor= readLine()!!.toInt()
     }catch (e: Exception){
         println("Vuelva a ingresar un numero ")
@@ -50,10 +68,29 @@ fun makeRecipe(): String{
     else {
         ingredientes = listaIngredientes.get(valor)
     }
-    return ingredientes
+    return ingredientes*/
+    do{
+        println(listaGeneral)
+        println("Escoger un grupo (Escribir el numero)")
+        try{
+            valor= readLine()!!.toInt()
+        }catch(e: Exception){
+            println("Vuelva a ingresar un numero")
+        }
+        when(valor){
+            1-> Agua(recetas)
+            2-> Leche(recetas)
+            3-> Carne(recetas)
+            4-> Verdura(recetas)
+            5-> Fruta(recetas)
+            6-> Cereal(recetas)
+            7-> Huevo(recetas)
+            8-> Aceite(recetas)
+        }
+    }while(valor.compareTo(9)<0)
 }
 
-fun viewRecipe(recetas: List<String>){
+fun viewRecipe(){
     println("Ingredientes de la receta :")
     recetas.forEach{
         println("$it")
